@@ -17,11 +17,11 @@ class ProductController {
   }
 
   async getOneProduct(req, res) {
-    const id = req.params.id;
-    const product = await productModel
-      .findById(id)
-      .populate("category", "name"); //còn thiếu chỗ này
     try {
+      const id = req.params.id;
+      const product = await productModel
+        .findById(id)
+        .populate("category", "name"); //còn thiếu chỗ này
       res.status(200).json({
         message: "lấy thành công",
         data: product,
