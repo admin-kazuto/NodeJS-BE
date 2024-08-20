@@ -53,4 +53,17 @@ class ProductController {
       });
     }
   }
+
+  async newProduct(res, req) {}
+
+  async deleteProduct(req, res) {
+    try {
+      const product = await productModel.findByIdAndDelete(req.param.id);
+      if(!product){
+        
+      }
+    } catch (error) {}
+  }
 }
+
+export default ProductController;

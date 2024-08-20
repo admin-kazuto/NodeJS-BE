@@ -1,3 +1,4 @@
+import mongoose, { mongo } from 'mongoose';
 import categoryModel from './../model/categoryModel';
 
 class CategoryController{
@@ -54,3 +55,5 @@ class CategoryController{
         }
     }
 }
+
+export default CategoryController
