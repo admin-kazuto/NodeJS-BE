@@ -11,3 +11,5 @@ bắt đầu bằng npm init
 ├── nodemon@3.1.4
 └── prettier@3.3.3
 
+khởi chạy file index.js
+dùng câu lệnh node index.js hoặc npm start
