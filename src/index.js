@@ -6,15 +6,19 @@ const morgan = require("morgan");
 const app = express();
 const port = 3000;
 
+
 app.use(morgan("combined")); // dùng để check request
 
-app.engine("handlebars", engine()); //templace engine
-app.set("view engine", "handlebars");
+app.engine("hbs", engine({
+    extname : '.hbs'
+})); //templace engine
+app.set("view engine", "hbs");
 app.set('views', path.join(__dirname, 'resources/views'))
 
 app.enable('view cache') //kiểm soát cache
 
 // console.log("PATH", path.join(__dirname,''))
 app.get("/", (req, res) => res.render('home'));
+app.get("/news", (req, res) => res.render('news'));
 app.listen(port, () => console.log(`http://localhost:${port}`));
 
