@@ -15,3 +15,5 @@ sử dụng express handlebars (npm install express-handlebars) trong ngoặc l�
 khởi chạy file index.js
 dùng câu lệnh node index.js hoặc npm start
 có sử dụng babel ( Babel là một công cụ chuyển đổi mã nguồn (transpiler) giúp chuyển đổi mã JavaScript hiện đại (ES6+) sang mã JavaScript tương thích với các trình duyệt cũ hơn hoặc các môi trường không hỗ trợ các tính năng mới.)
+cài thêm sass (npm i sass --save-dev)
+cho thêm file nodemon.json để thêm extensions scss

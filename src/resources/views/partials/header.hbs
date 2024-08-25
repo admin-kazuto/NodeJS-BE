@@ -1,108 +1,26 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tên Trang Web của Bạn</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Thêm các thẻ meta khác như mô tả, từ khóa nếu cần -->
-</head>
-<body>
-    <header>
-        <div class="header-container">
+<header>
+        <div class="top-bar">
+            <p>Giao hàng miễn phí cho đơn hàng trên 1.000.000 VND</p>
+        </div>
+        <div class="header-main">
             <div class="logo">
-                <a href="/"><img src="http://localhost:3000/img/kuro.png" alt="Logo Công ty"></a>
+                <a href="#"><img src="logo.png" alt="ABC Shoes"></a>
             </div>
-            <nav class="navbar">
+            <nav>
                 <ul>
-                    <li><a href="/home">Trang Chủ</a></li>
-                    <li><a href="/about">Giới Thiệu</a></li>
-                    <li><a href="/services">Dịch Vụ</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/contact">Liên Hệ</a></li>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Liên hệ</a></li>
                 </ul>
             </nav>
-            <div class="header-right">
-                <a href="/contact" class="btn-contact">Liên Hệ</a>
+            <div class="search-cart">
+                <form class="search-bar">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
             </div>
         </div>
     </header>
-
-    <!-- Nội dung chính của trang web -->
-    <main>
-        <section>
-           
-            <!-- ... -->
-        </section>
-        <!-- Các phần khác của trang web -->
-    </main>
-
-    <!-- Footer có thể được thêm ở đây -->
-
-    <!-- Thêm các script nếu cần -->
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #060707;
-    color: #fff;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo img {
-    height: 50px;
-}
-
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.navbar ul li {
-    margin-left: 20px;
-}
-
-.navbar ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-    background-color: #444;
-}
-
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .navbar ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-}
-
-    </style>
-</body>
-</html>
