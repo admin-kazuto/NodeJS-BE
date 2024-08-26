@@ -1,6 +1,6 @@
 // import { engine } from "express-handlebars";
 const path = require("path");
-const sass = require('sass');
+const sass = require("sass");
 const { engine } = require("express-handlebars");
 const express = require("express");
 const morgan = require("morgan");
@@ -30,4 +30,8 @@ app.enable("view cache"); //kiểm soát cache
 // console.log("PATH", path.join(__dirname,''))
 app.get("/", (req, res) => res.render("home"));
 app.get("/news", (req, res) => res.render("news"));
+app.get("/search", (req, res) => {
+  // console.log(req.query.q) check tìm kiếm
+  res.render("search");
+});
 app.listen(port, () => console.log(`http://localhost:${port}`));
