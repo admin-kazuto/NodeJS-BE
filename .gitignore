@@ -2,3 +2,4 @@ node_modules/
 package-lock.json
 package.json
 babel.config.json
+src/resources/public/css
