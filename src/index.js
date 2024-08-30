@@ -4,8 +4,10 @@ const sass = require("sass");
 const { engine } = require("express-handlebars");
 const express = require("express");
 const morgan = require("morgan");
+const { required } = require("joi");
 const app = express();
 const port = 3000;
+const route = require("./router")
 
 app.use(express.static(path.join(__dirname, "resources/public")));
 
@@ -27,11 +29,8 @@ app.set("views", path.join(__dirname, "resources/views"));
 
 app.enable("view cache"); //kiểm soát cache
 
-// console.log("PATH", path.join(__dirname,''))
-app.get("/", (req, res) => res.render("home"));
-app.get("/news", (req, res) => res.render("news"));
-app.get("/search", (req, res) => {
-  // console.log(req.query.q) check tìm kiếm
-  res.render("search");
-});
+//khởi tạo tuyến đường
+route(app);
+
+
 app.listen(port, () => console.log(`http://localhost:${port}`));
