@@ -7,7 +7,7 @@ const morgan = require("morgan");
 const { required } = require("joi");
 const app = express();
 const port = 3000;
-const route = require("./router")
+
 
 app.use(express.static(path.join(__dirname, "resources/public")));
 
@@ -30,6 +30,7 @@ app.set("views", path.join(__dirname, "resources/views"));
 app.enable("view cache"); //kiểm soát cache
 
 //khởi tạo tuyến đường
+const route = require("./router")
 route(app);
 
 
