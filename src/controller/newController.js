@@ -1,7 +1,7 @@
 const { model } = require("mongoose")
 
 class NewsController {
-    index(res,req){
+    index(req,res){
         res.render('news')
     }
 }
